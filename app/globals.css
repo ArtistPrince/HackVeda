@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%;
+    --foreground: 39 52% 88%;
+    --card: 0 0% 15%;
+    --card-foreground: 39 52% 88%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 39 52% 88%;
+    --primary: 200 28% 30%;
+    --primary-foreground: 39 52% 88%;
+    --secondary: 14 47% 56%;
+    --secondary-foreground: 39 52% 88%;
+    --muted: 200 28% 30%;
+    --muted-foreground: 39 52% 88%;
+    --accent: 14 47% 56%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 14 47% 56%;
+    --destructive-foreground: 39 52% 88%;
+    --border: 200 28% 30%;
+    --input: 200 28% 30%;
+    --ring: 14 47% 56%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 39 52% 88%;
+    --card: 0 0% 15%;
+    --card-foreground: 39 52% 88%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 39 52% 88%;
+    --primary: 200 28% 30%;
+    --primary-foreground: 39 52% 88%;
+    --secondary: 14 47% 56%;
+    --secondary-foreground: 39 52% 88%;
+    --muted: 200 28% 30%;
+    --muted-foreground: 39 52% 88%;
+    --accent: 14 47% 56%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 14 47% 56%;
+    --destructive-foreground: 39 52% 88%;
+    --border: 200 28% 30%;
+    --input: 200 28% 30%;
+    --ring: 14 47% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    @apply text-[#E8DDBF];
+    background-color: #1A1A1A;
+    font-family: var(--font-poppins), sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+    cursor: none;
+  }
+  
+  /* Custom Cursor */
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(225, 109, 60, 0.8);
+    box-shadow: 0 0 10px rgba(225, 109, 60, 0.5),
+                0 0 20px rgba(225, 109, 60, 0.3),
+                0 0 30px rgba(225, 109, 60, 0.2);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+    mix-blend-mode: difference;
+  }
+  
+  .custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(225, 109, 60, 0.6);
+    box-shadow: 0 0 15px rgba(225, 109, 60, 0.6),
+                0 0 30px rgba(225, 109, 60, 0.4),
+                0 0 45px rgba(225, 109, 60, 0.3);
+  }
+  
+  /* Scroll Snap */
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1A1A1A;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #E16D3C;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E8DDBF;
+  }
+  
+  /* Loader Animation */
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid rgba(225, 109, 60, 0.3);
+    border-radius: 50%;
+    border-top-color: #E16D3C;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: var(--font-poppins), sans-serif;
+  }
+  
+  .font-orbitron {
+    font-family: var(--font-orbitron), sans-serif;
+  }
+}
+
