@@ -99,19 +99,7 @@ export function TimelineSection() {
             </div>
           </motion.div>
 
-          {/* Right Side - 3D Robot */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="h-[300px] md:h-[350px] lg:h-[400px] relative"
-          >
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-            />
-          </motion.div>
+          
         </div>
       </div>
     </section>

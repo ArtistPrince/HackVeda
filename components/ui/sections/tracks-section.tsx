@@ -38,10 +38,7 @@ export function TracksSection() {
             transition={{ duration: 0.8 }}
             className="h-[300px] md:h-[350px] lg:h-[400px] relative"
           >
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-            />
+            
           </motion.div>
 
           {/* Right Side - Content */}
