@@ -53,7 +53,7 @@ export function Footer() {
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  whileHover={{ scale: 1.1, color: '#B5B5B5' }}
+                  whileHover={{ scale: 1.1, color: '#E16D3C' }}
                   whileTap={{ scale: 0.95 }}
                   className="text-[#E8DDBF] hover:text-[#E16D3C] transition-colors text-sm opacity-80"
                 >
@@ -82,14 +82,14 @@ export function Footer() {
                 <span>+91 9910000000</span>
               </div>
               <motion.a
-                href="https://instagram.com/iilm.edu"
+                href="https://www.instagram.com/hackathon_iilm/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, color: '#E16D3C' }}
                 className="flex items-center gap-2 text-[#E8DDBF] hover:text-[#E16D3C] transition-colors"
               >
                 <Instagram className="w-4 h-4" />
-                <span>@iilm.edu</span>
+                <span>@hackathon_iilm</span>
               </motion.a>
             </div>
           </motion.div>

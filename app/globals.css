@@ -69,11 +69,12 @@
     font-family: var(--font-poppins), sans-serif;
     overflow-x: hidden;
     height: 100%;
-    cursor: none;
+    cursor: default;
   }
   
   /* Custom Cursor */
   .custom-cursor {
+    display: none;
     position: fixed;
     width: 20px;
     height: 20px;

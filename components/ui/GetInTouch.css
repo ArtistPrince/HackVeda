@@ -1,0 +1,220 @@
+/* Import pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.git-container {
+  --dark-bg: #1A1A1A;
+  --dark-blue: #2C3E50;
+  --primary-orange: #E16D3C;
+  --beige-cream: #E8DDBF;
+  --lavender: #E8DDBF;
+
+  display: flex;
+  gap: 2rem;
+  padding: 3.5rem;
+  align-items: stretch;
+  background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-blue) 100%);
+  color: white;
+  border-radius: 0.6rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(225, 109, 60, 0.2);
+}
+
+/* Left column */
+.git-left {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.git-heading-wrapper {
+  max-width: fit-content;
+}
+
+.git-heading {
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace !important;
+  font-weight: 400 !important;
+  font-size: clamp(1.3rem, 3.2vw, 2.4rem) !important;
+  line-height: 1.6 !important;
+  text-transform: none !important;
+  letter-spacing: 0.05em !important;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  display: block;
+  color: var(--beige-cream) !important;
+}
+
+.git-heading.shuffle-parent {
+  font-size: clamp(1.3rem, 3.2vw, 2.4rem) !important;
+  text-transform: none !important;
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace !important;
+}
+
+.git-heading-line1 {
+  margin-bottom: 0.2rem;
+}
+
+.git-heading-line2 {
+  margin-bottom: 0;
+}
+
+.git-heading .underline {
+  display: inline-block;
+  position: relative;
+}
+
+.git-heading .underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.18em;
+  width: 70%;
+  height: 0.12em;
+  background: linear-gradient(90deg, var(--primary-orange), var(--beige-cream));
+  border-radius: 999px;
+  opacity: 0.95;
+  transform: translateY(1px);
+}
+
+/* Right column */
+.git-right {
+  flex: 1 1 50%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.contact-card {
+  background: linear-gradient(180deg, rgba(225, 109, 60, 0.05), rgba(44, 62, 80, 0.1));
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(225, 109, 60, 0.2);
+}
+
+.contact-top {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--dark-blue));
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(225, 109, 60, 0.3);
+  flex-shrink: 0;
+}
+
+.contact-details h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--beige-cream);
+}
+
+.contact-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--lavender);
+}
+
+.contact-middle {
+  margin-top: 1.1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.icon-btn {
+  width: 72px;
+  height: 56px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(225, 109, 60, 0.1), rgba(44, 62, 80, 0.1));
+  border: 1px solid rgba(225, 109, 60, 0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(225, 109, 60, 0.4);
+}
+
+.small-card-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0;
+}
+
+/* ensure both small cards share equal width and align under big card */
+.small-card-row .contact-card {
+  flex: 1;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.small-card-row .contact-card .icon-wrap {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.small-card-row .contact-card .label {
+  color: var(--lavender);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-footer {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .git-container { 
+    flex-direction: column; 
+    gap: 1.25rem; 
+    padding: 2rem; 
+  }
+  .git-right { 
+    width: 100%; 
+    flex: none; 
+    max-width: 100%;
+  }
+  .git-left { 
+    justify-content: flex-start; 
+    padding: 0 0.25rem; 
+  }
+  .contact-card { 
+    width: 100%; 
+  }
+}
+

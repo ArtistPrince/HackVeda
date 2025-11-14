@@ -1,0 +1,138 @@
+.timeline-table-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(44, 62, 80, 0.95) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(225, 109, 60, 0.2);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-table-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  background: linear-gradient(135deg, rgba(225, 109, 60, 0.15) 0%, rgba(44, 62, 80, 0.15) 100%);
+  border-bottom: 2px solid rgba(225, 109, 60, 0.3);
+  padding: 20px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.timeline-header-date,
+.timeline-header-description {
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  color: #E8DDBF;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.timeline-list-container {
+  max-height: 600px;
+}
+
+.timeline-row-wrapper {
+  margin-bottom: 0 !important;
+  padding: 0 24px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(225, 109, 60, 0.1);
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.timeline-row:last-child {
+  border-bottom: none;
+}
+
+.timeline-row:hover {
+  background-color: rgba(225, 109, 60, 0.05);
+}
+
+.timeline-row.selected {
+  background-color: rgba(225, 109, 60, 0.1);
+  border-left: 3px solid #E16D3C;
+  padding-left: 21px;
+}
+
+.timeline-date {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+}
+
+.date-text {
+  color: #E16D3C;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.timeline-description {
+  display: flex;
+  align-items: center;
+}
+
+.description-text {
+  color: #E8DDBF;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.timeline-row.selected .description-text {
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-table-header,
+  .timeline-row {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .timeline-header-date,
+  .timeline-date {
+    padding-right: 16px;
+  }
+
+  .header-text {
+    font-size: 0.85rem;
+  }
+
+  .date-text {
+    font-size: 0.9rem;
+  }
+
+  .description-text {
+    font-size: 0.85rem;
+  }
+
+  .timeline-table-header {
+    padding: 16px 20px;
+  }
+
+  .timeline-row-wrapper {
+    padding: 0 20px;
+  }
+
+  .timeline-row {
+    padding: 16px 0;
+  }
+}
+
