@@ -185,9 +185,9 @@ const Shuffle: React.FC<ShuffleProps> = ({
           wrap.appendChild(inner)
 
           const firstOrig = ch.cloneNode(true) as HTMLElement
-          Object.assign(firstOrig.style, { display: 'inline-block', width: w + 'px', textAlign: 'center' })
+          Object.assign((firstOrig as HTMLElement).style, { display: 'inline-block', width: w + 'px', textAlign: 'center' })
           ch.setAttribute('data-orig', '1')
-          Object.assign(ch.style, { display: 'inline-block', width: w + 'px', textAlign: 'center' })
+          Object.assign((ch as HTMLElement).style, { display: 'inline-block', width: w + 'px', textAlign: 'center' })
 
           inner.appendChild(firstOrig)
 
