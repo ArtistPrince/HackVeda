@@ -60,7 +60,7 @@ const GlareHover: React.FC<GlareHoverProps> = ({
     '--gh-size': `${glareSize}%`,
     '--gh-rgba': rgba,
     '--gh-border': borderColor
-  }
+  }as React.CSSProperties}
 
   return (
     <div
