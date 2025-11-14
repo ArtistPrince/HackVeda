@@ -45,6 +45,7 @@ interface AnimatedListProps {
   selectedIndex?: number
   onSelectionChange?: (index: number) => void
   children?: React.ReactNode
+  setSelectedIndex: React.Dispatch<React.SetStateAction<number>>; 
 }
 
 const AnimatedList = ({
@@ -64,14 +65,23 @@ const AnimatedList = ({
   const [internalSelectedIndex, setInternalSelectedIndex] = useState(initialSelectedIndex)
   const selectedIndex = externalSelectedIndex !== undefined ? externalSelectedIndex : internalSelectedIndex
   
-  const setSelectedIndex = (index: number) => {
+  const setSelectedIndex = (indexOrUpdater: React.SetStateAction<number>) => {
+    // 1. Determine the new index value
+    const newIndex =
+      typeof indexOrUpdater === 'function'
+        ? indexOrUpdater(selectedIndex) // Call the updater function with the current index
+        : indexOrUpdater;          // Use the number value directly
+
+    // 2. Update internal state if uncontrolled
     if (externalSelectedIndex === undefined) {
-      setInternalSelectedIndex(index)
+      setInternalSelectedIndex(newIndex);
     }
+
+    // 3. Call the external onSelectionChange handler
     if (onSelectionChange) {
-      onSelectionChange(index)
+      onSelectionChange(newIndex);
     }
-  }
+  };
   const [keyboardNav, setKeyboardNav] = useState(false)
   const [topGradientOpacity, setTopGradientOpacity] = useState(0)
   const [bottomGradientOpacity, setBottomGradientOpacity] = useState(1)
