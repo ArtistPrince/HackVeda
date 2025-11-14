@@ -50,7 +50,7 @@ const GlareHover: React.FC<GlareHoverProps> = ({
     rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`
   }
 
-  const vars: React.CSSProperties = {
+  const vars = {
     ...(width !== undefined ? { '--gh-width': typeof width === 'number' ? `${width}px` : width } : {}),
     ...(height !== undefined ? { '--gh-height': typeof height === 'number' ? `${height}px` : height } : {}),
     '--gh-bg': background,
@@ -59,8 +59,8 @@ const GlareHover: React.FC<GlareHoverProps> = ({
     '--gh-duration': `${transitionDuration}ms`,
     '--gh-size': `${glareSize}%`,
     '--gh-rgba': rgba,
-    '--gh-border': borderColor
-  }as React.CSSProperties}
+    '--gh-border': borderColor,
+  } as React.CSSProperties;
 
   return (
     <div
