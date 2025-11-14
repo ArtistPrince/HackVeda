@@ -9,8 +9,9 @@ const navItems = [
   { name: 'Home', id: 'home' },
   { name: 'About', id: 'about' },
   { name: 'Timeline', id: 'timeline' },
-  { name: 'Tracks', id: 'tracks' },
-  { name: 'Sponsors', id: 'sponsors' },
+  { name: 'Themes', id: 'themes' },
+  { name: 'Prerequisites', id: 'prerequisites' },
+  { name: 'Rounds', id: 'rounds' },
   { name: 'Contact', id: 'contact' },
 ]
 
@@ -39,7 +40,7 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#1A1A1A]/80 backdrop-blur-md border-b border-[#E16D3C]/20' : 'bg-transparent'
+        scrolled ? 'bg-[#1A1A1A]/95 backdrop-blur-md border-b border-[#E16D3C]/20' : 'bg-[#1A1A1A]/90 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,19 +71,19 @@ export function Navigation() {
               </motion.button>
             ))}
             <a
-              href="https://docs.google.com/forms/d/133p7aXCZ94o4gsDxPkMFi_r_UBDlU0TWQ8hCzC9SKhg/edit"
+              href="https://forms.gle/ddaZoa56aXnf4rpe8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
               <LiquidButton
                 size="sm"
-                className="relative font-semibold bg-gradient-to-r from-[#2C3E50] via-[#E16D3C] to-[#E8DDBF] text-white 
-                  hover:from-[#E16D3C] hover:via-[#E8DDBF] hover:to-[#2C3E50]
-                  transition-all duration-300
-                  shadow-[0_0_15px_rgba(225,109,60,0.5),0_0_30px_rgba(232,221,191,0.3)]
-                  hover:shadow-[0_0_20px_rgba(225,109,60,0.7),0_0_40px_rgba(232,221,191,0.5)]
-                  hover:scale-105"
+                    className="relative font-semibold bg-gradient-to-r from-[#2C3E50] via-[#E16D3C] to-[#E8DDBF] text-white 
+                      hover:from-[#E16D3C] hover:via-[#E8DDBF] hover:to-[#2C3E50]
+                      transition-all duration-300
+                      shadow-[0_0_15px_rgba(225,109,60,0.5),0_0_30px_rgba(232,221,191,0.3)]
+                      hover:shadow-[0_0_20px_rgba(225,109,60,0.7),0_0_40px_rgba(232,221,191,0.5)]
+                      hover:scale-105"
               >
                 <span className="relative z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                   Register
@@ -124,7 +125,7 @@ export function Navigation() {
               ))}
               <div className="pt-4">
                 <a
-                  href="https://docs.google.com/forms/d/133p7aXCZ94o4gsDxPkMFi_r_UBDlU0TWQ8hCzC9SKhg/edit"
+                  href="https://forms.gle/ddaZoa56aXnf4rpe8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block"

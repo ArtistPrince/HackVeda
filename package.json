@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@paper-design/shaders-react": "^0.0.63",
     "@radix-ui/react-slot": "^1.2.4",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.10.99",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.553.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
