@@ -92,7 +92,7 @@ const AnimatedList = ({
       if (e.key === 'ArrowDown' || (e.key === 'Tab' && !e.shiftKey)) {
         e.preventDefault()
         setKeyboardNav(true)
-        setSelectedIndex(prev => Math.min(prev + 1, itemCount - 1))
+        setSelectedIndex((prev: number) => Math.min(prev + 1, itemCount - 1))
       } else if (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey)) {
         e.preventDefault()
         setKeyboardNav(true)
