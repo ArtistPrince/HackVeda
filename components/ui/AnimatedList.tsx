@@ -96,7 +96,7 @@ const AnimatedList = ({
       } else if (e.key === 'ArrowUp' || (e.key === 'Tab' && e.shiftKey)) {
         e.preventDefault()
         setKeyboardNav(true)
-        setSelectedIndex(prev => Math.max(prev - 1, 0))
+        setSelectedIndex((prev: number) => Math.max(prev - 1, 0))
       } else if (e.key === 'Enter') {
         if (selectedIndex >= 0 && selectedIndex < itemCount) {
           e.preventDefault()
