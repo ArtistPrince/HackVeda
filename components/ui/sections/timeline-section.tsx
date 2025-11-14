@@ -138,7 +138,7 @@ export function TimelineSection() {
             displayScrollbar={true}
             selectedIndex={selectedIndex}
             setSelectedIndex={setSelectedIndex} // <--- This is the fix
-            items={timelineData}}
+            items={timelineData}
             onItemSelect={handleItemSelect}
           >
             {timelineData.map((item, index) => (
