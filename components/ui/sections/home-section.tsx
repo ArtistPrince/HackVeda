@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { SplineScene } from '@/components/ui/splite'
+import Orb from '@/components/ui/Orb'
 import { LiquidButton } from '@/components/ui/liquid-glass-button'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -72,13 +72,35 @@ export function HomeSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(225,109,60,0.1),transparent_50%)] z-[1]" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Side - Content */}
+        <div className="relative flex flex-col items-center justify-center min-h-[700px] md:min-h-[900px]">
+          {/* Orb - Behind Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1.0, scale: 1.4 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 text-center order-2 lg:order-1 pt-12 lg:pt-20"
+            className="absolute z-[2] pointer-events-none"
+            style={{
+              left: '23%',  // Adjust this value to move left/right (e.g., '5%', '15%', '50%', '20px')
+              top: '15%',   // Adjust this value to move up/down (e.g., '40%', '60%', '100px')
+              transform: 'translateY(-50%)' // Centers vertically based on top position
+            }}
+          >
+            <div className="h-[600px] md:h-[700px] lg:h-[700px] w-[600px] md:w-[700px] lg:w-[700px] relative">
+              <Orb
+                hoverIntensity={0.5}
+                rotateOnHover={true}
+                hue={0}
+                forceHoverState={false}
+              />
+            </div>
+          </motion.div>
+
+          {/* Content - On Top */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="space-y-6 text-center w-full max-w-4xl relative z-[3]"
           >
             {/* 1. IILM University Image */}
             <motion.div
@@ -231,19 +253,6 @@ export function HomeSection() {
                 </motion.div>
               )}
             </motion.div>
-          </motion.div>
-
-          {/* Right Side - 3D Robot */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="h-[500px] md:h-[650px] lg:h-[800px] relative order-1 lg:order-2"
-          >
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-            />
           </motion.div>
         </div>
       </div>

@@ -14,47 +14,47 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
   {
     id: 1,
-    date: '15 Nov',
+    date: '15 Nov 2025',
     description: 'Registrations open'
   },
   {
     id: 2,
-    date: '05 Jan',
+    date: '05 Jan 2026',
     description: 'Registrations close'
   },
   {
     id: 3,
-    date: '4 Dec - 4 Jan',
+    date: '4 Dec 2025 - 4 Jan 2026',
     description: 'Online pre-learning (AWS, IBM + theme)'
   },
   {
     id: 4,
-    date: '5 - 9 Jan',
+    date: '5 - 9 Jan 2026',
     description: 'Enablement sessions (AWS, IBM Gen AI, 60–90 min/day)'
   },
   {
     id: 5,
-    date: '10 - 16 Jan',
+    date: '10 - 16 Jan 2026',
     description: 'Idea submission'
   },
   {
     id: 6,
-    date: '20 Jan',
+    date: '20 Jan 2026',
     description: 'Shortlist teams announcement (30 teams)'
   },
   {
     id: 7,
-    date: '21 - 27 Jan',
+    date: '21 - 27 Jan 2026',
     description: 'Online office hours for shortlisted teams'
   },
   {
     id: 8,
-    date: '28 Jan',
+    date: '28 Jan 2026',
     description: 'Environment setup & access support (online)'
   },
   {
     id: 9,
-    date: '29 - 30 Jan',
+    date: '29 - 30 Jan 2026',
     description: 'Hackathon at IILM University, Greater Noida (physical)'
   }
 ]

@@ -58,15 +58,11 @@ export function ContactSection() {
                   <div className="contact-details">
                     <h4>Mr. Priyansh Singh </h4>
                     <p>Student Coordinator, IILM University</p>
-                    <p style={{ marginTop: "0.45rem", fontSize: "0.88rem" }}>+91 9910000000</p>
+                    <p style={{ marginTop: "0.45rem", fontSize: "0.88rem" }}>priyansh.singh.csibm26@iilm.edu</p>
                   </div>
                 </div>
 
-                <div className="contact-middle">
-                  <div style={{ fontSize: '0.95rem', color: '#E8DDBF' }}>
-                    priyansh.singh.csibm26@iilm.edu
-                  </div>
-                </div>
+                
               </div>
             </GlareHover>
 

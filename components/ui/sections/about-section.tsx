@@ -433,8 +433,8 @@ export function AboutSection() {
                     <PrizeIcon />
                   </div>
                 </div>
-                <h3 className="text-green-400 text-lg font-semibold mb-3">Prize Pool</h3>
-                <p className="text-green-300 text-base md:text-lg font-semibold leading-relaxed">Prizes and goodies for the winners</p>
+                <h3 className="text-green-400 text-lg font-semibold mb-3">Prizes</h3>
+                <p className="text-green-300 text-base md:text-lg font-semibold leading-relaxed">Goodies for the winners</p>
               </div>
               </motion.div>
             </ParticleCardWrapper>

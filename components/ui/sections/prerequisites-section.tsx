@@ -324,7 +324,7 @@ export function PrerequisitesSection() {
               Prerequisites
             </h2>
             <p className="text-[#E8DDBF] text-lg opacity-80 max-w-2xl mx-auto">
-            For Education/Skill development Theams please look for suitable Online resources.
+            For Education/Skill development Themes please look for suitable Online resources.
             </p>
           </motion.div>
 
@@ -337,7 +337,7 @@ export function PrerequisitesSection() {
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-br from-[#1A1A1A]/40 to-[#2C3E50]/40 border-2 border-[#E16D3C]/30 rounded-2xl p-8 backdrop-blur-sm shadow-xl hover:border-[#E16D3C]/50 transition-all duration-300"
             >
-              <h3 className="text-3xl font-bold text-[#E16D3C] mb-8 text-center">Mendatory Learning for all participants</h3>
+              <h3 className="text-3xl font-bold text-[#E16D3C] mb-8 text-center">Mandatory Learning for all participants</h3>
               <CardStackWithModal cards={mainCards} onLearnMore={(cardTitle) => handleLearnMore(cardTitle)} />
             </motion.div>
 

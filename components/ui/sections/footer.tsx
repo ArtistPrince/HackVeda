@@ -75,11 +75,15 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-[#E8DDBF] opacity-80">
                 <Mail className="w-4 h-4 text-[#E16D3C]" />
-                <span>hackveda@iilm.edu</span>
+                <span>priyansh.singh.csibm26@iilm.edu</span>
               </div>
               <div className="flex items-center gap-2 text-[#E8DDBF] opacity-80">
-                <Phone className="w-4 h-4 text-[#E16D3C]" />
-                <span>+91 9910000000</span>
+                <Mail className="w-4 h-4 text-[#E16D3C]" />
+                <span>akshat.shakya.cs27@iilm.edu</span>
+              </div>
+              <div className="flex items-center gap-2 text-[#E8DDBF] opacity-80">
+                <Mail className="w-4 h-4 text-[#E16D3C]" />
+                <span>jayant.singh.cs27@iilm.edu</span>
               </div>
               <motion.a
                 href="https://www.instagram.com/hackathon_iilm/"
@@ -102,7 +106,7 @@ export function Footer() {
           viewport={{ once: true }}
           className="mt-8 pt-8 border-t border-[#E16D3C]/20 text-center text-[#E8DDBF] text-sm opacity-60"
         >
-          <p>&copy; 2025 HackVeda. All rights reserved.</p>
+          <p>&copy; 2025-2026 HackVeda. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>
