@@ -214,7 +214,7 @@ If you encounter build errors:
 ## 📞 Contact & Support
 
 For questions or support, please contact:
-- **Email**: priyansh.singh.csibm26@iilm.edu
+- **Email**: akshat.shakya.cs27@iilm.edu
 - **GitHub**: [ArtistPrince](https://github.com/ArtistPrince)
 
 ## 📄 License
@@ -224,7 +224,9 @@ This project is private and proprietary. All rights reserved.
 ## 🙏 Acknowledgments
 
 - IILM University for organizing HackVeda
-- IBM-AWS for collaboration and support
+- IBM for collaboration and support
+- All contributors and developers
+
 ---
 
 **Happy Coding! 🚀**

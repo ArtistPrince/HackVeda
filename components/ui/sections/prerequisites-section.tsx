@@ -83,7 +83,16 @@ const awsEducateModules: Module[] = [
     ]
   }
 ]
-
+const ibmMandatoryModule: Module = {
+  name: 'IBM SkillsBuild Course',
+  courses: [
+    {
+      title: 'IBM SkillsBuild Learning Path',
+      duration: 'Self-paced',
+      url: 'https://skills.yourlearning.ibm.com/activity/PLAN-3897EAA7D08A'
+    }
+  ]
+}
 const mainCards = [
   {
     title: 'Cloud Computing',
@@ -98,6 +107,11 @@ const mainCards = [
   {
     title: 'Agentic AI & RAG',
     description: 'Explore Agentic AI and Retrieval-Augmented Generation',
+    link: '#'
+  },
+  {
+    title: 'IBM',
+    description: 'Build with Intelligence: Transforming Learners into Innovators',
     link: '#'
   }
 ]
@@ -279,6 +293,12 @@ export function PrerequisitesSection() {
   // Handler for "For All" section
   const handleLearnMore = (cardTitle: string) => {
     // Find the module that matches the clicked card
+    if (cardTitle === 'IBM') {
+      setSelectedModule(ibmMandatoryModule)
+      setModalTitle('IBM - Mandatory Learning')
+      setIsModalOpen(true)
+      return
+    }
     const module = awsEducateModules.find(m => m.name === cardTitle)
     if (module) {
       setSelectedModule(module)
@@ -338,7 +358,30 @@ export function PrerequisitesSection() {
               className="bg-gradient-to-br from-[#1A1A1A]/40 to-[#2C3E50]/40 border-2 border-[#E16D3C]/30 rounded-2xl p-8 backdrop-blur-sm shadow-xl hover:border-[#E16D3C]/50 transition-all duration-300"
             >
               <h3 className="text-3xl font-bold text-[#E16D3C] mb-8 text-center">Mandatory Learning for all participants</h3>
-              <CardStackWithModal cards={mainCards} onLearnMore={(cardTitle) => handleLearnMore(cardTitle)} />
+              <div className="overflow-x-auto pb-2">
+              <div className="flex flex-col gap-6">
+  {mainCards.map((card, idx) => (
+    <div
+      key={idx}
+      className="w-full bg-gradient-to-br from-[#1A1A1A] to-[#2C3E50]
+      border-2 border-[#E16D3C]/40 rounded-xl p-6 shadow-lg
+      hover:shadow-2xl hover:border-[#E16D3C]/80
+      transition-all duration-200 flex flex-col items-center cursor-pointer"
+      onClick={() => handleLearnMore(card.title)}
+    >
+      <h3 className="text-xl font-bold text-[#E8DDBF] mb-2">{card.title}</h3>
+      {card.description && (
+        <p className="text-[#E8DDBF] text-sm opacity-80 mb-4 text-center">{card.description}</p>
+      )}
+      <button
+        className="inline-flex items-center justify-center px-4 py-2 mt-2 bg-gradient-to-r from-[#E16D3C] to-[#2C3E50] text-white text-sm font-semibold rounded-lg hover:from-[#E16D3C] hover:to-[#E16D3C] transition-all duration-300 shadow-md hover:shadow-lg"
+      >
+        Learn More
+      </button>
+    </div>
+  ))}
+</div>
+</div>
             </motion.div>
 
             {/* Right Box - AS per Theme */}
@@ -350,7 +393,28 @@ export function PrerequisitesSection() {
               className="bg-gradient-to-br from-[#1A1A1A]/40 to-[#2C3E50]/40 border-2 border-[#E16D3C]/30 rounded-2xl p-8 backdrop-blur-sm shadow-xl hover:border-[#E16D3C]/50 transition-all duration-300"
             >
               <h3 className="text-3xl font-bold text-[#E16D3C] mb-8 text-center">Themes based learning for participants</h3>
-              <CardStackWithModal cards={themeCards} onLearnMore={(cardTitle) => handleThemeLearnMore(cardTitle)} />
+              <div className="flex flex-col gap-6">
+  {themeCards.map((card, idx) => (
+    <div
+      key={idx}
+      className="w-full bg-gradient-to-br from-[#1A1A1A] to-[#2C3E50]
+      border-2 border-[#E16D3C]/40 rounded-xl p-6 shadow-lg
+      hover:shadow-2xl hover:border-[#E16D3C]/80
+      transition-all duration-200 flex flex-col items-center cursor-pointer"
+      onClick={() => handleThemeLearnMore(card.title)}
+    >
+      <h3 className="text-xl font-bold text-[#E8DDBF] mb-2">{card.title}</h3>
+      {card.description && (
+        <p className="text-[#E8DDBF] text-sm opacity-80 mb-4 text-center">{card.description}</p>
+      )}
+      <button
+        className="inline-flex items-center justify-center px-4 py-2 mt-2 bg-gradient-to-r from-[#E16D3C] to-[#2C3E50] text-white text-sm font-semibold rounded-lg hover:from-[#E16D3C] hover:to-[#E16D3C] transition-all duration-300 shadow-md hover:shadow-lg"
+      >
+        Learn More
+      </button>
+    </div>
+  ))}
+</div>
             </motion.div>
           </div>
         </div>
