@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  output: 'export', // tells Next to generate static HTML
+};
 
-module.exports = nextConfig
-
+module.exports = nextConfig;
