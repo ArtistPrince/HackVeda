@@ -358,15 +358,20 @@ export function PrerequisitesSection() {
               className="bg-gradient-to-br from-[#1A1A1A]/40 to-[#2C3E50]/40 border-2 border-[#E16D3C]/30 rounded-2xl p-8 backdrop-blur-sm shadow-xl hover:border-[#E16D3C]/50 transition-all duration-300"
             >
               <h3 className="text-3xl font-bold text-[#E16D3C] mb-8 text-center">Mandatory Learning for all participants</h3>
-              <div className="overflow-x-auto pb-2">
-              <div className="flex flex-col gap-6">
+              <div className="pb-2" style={{ overflow: 'visible' }}>
+<div className="flex flex-col gap-6">
   {mainCards.map((card, idx) => (
     <div
       key={idx}
-      className="w-full bg-gradient-to-br from-[#1A1A1A] to-[#2C3E50]
-      border-2 border-[#E16D3C]/40 rounded-xl p-6 shadow-lg
-      hover:shadow-2xl hover:border-[#E16D3C]/80
-      transition-all duration-200 flex flex-col items-center cursor-pointer"
+      className="
+    w-full bg-gradient-to-br from-[#1A1A1A] to-[#2C3E50]
+    border-2 border-[#E16D3C]/40 rounded-xl p-6
+    shadow-[0_0_16px_2px_rgba(225,109,60,0.4)]
+    transition-all duration-200 flex flex-col items-center cursor-pointer
+    hover:shadow-[0_0_32px_4px_rgba(225,109,60,0.6)]
+    hover:border-[#E16D3C]/80
+    hover:scale-105
+  "
       onClick={() => handleLearnMore(card.title)}
     >
       <h3 className="text-xl font-bold text-[#E8DDBF] mb-2">{card.title}</h3>
@@ -397,10 +402,15 @@ export function PrerequisitesSection() {
   {themeCards.map((card, idx) => (
     <div
       key={idx}
-      className="w-full bg-gradient-to-br from-[#1A1A1A] to-[#2C3E50]
-      border-2 border-[#E16D3C]/40 rounded-xl p-6 shadow-lg
-      hover:shadow-2xl hover:border-[#E16D3C]/80
-      transition-all duration-200 flex flex-col items-center cursor-pointer"
+      className="
+    w-full bg-gradient-to-br from-[#1A1A1A] to-[#2C3E50]
+    border-2 border-[#E16D3C]/40 rounded-xl p-6
+    shadow-[0_0_16px_2px_rgba(225,109,60,0.4)]
+    transition-all duration-200 flex flex-col items-center cursor-pointer
+    hover:shadow-[0_0_32px_4px_rgba(225,109,60,0.6)]
+    hover:border-[#E16D3C]/80
+    hover:scale-105
+  "
       onClick={() => handleThemeLearnMore(card.title)}
     >
       <h3 className="text-xl font-bold text-[#E8DDBF] mb-2">{card.title}</h3>
