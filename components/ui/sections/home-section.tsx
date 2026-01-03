@@ -17,7 +17,7 @@ export function HomeSection() {
 
   useEffect(() => {
     const calculateDaysLeft = () => {
-      const registrationDate = new Date('2025-01-05T23:59:59')
+      const registrationDate = new Date('2026-01-10T23:59:59')
       const today = new Date()
       const diffTime = registrationDate.getTime() - today.getTime()
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
@@ -53,10 +53,10 @@ export function HomeSection() {
 
     calculateDaysLeft()
     calculateEventCountdown()
-    
+
     const registrationInterval = setInterval(calculateDaysLeft, 1000 * 60 * 60) // Update every hour
     const eventInterval = setInterval(calculateEventCountdown, 1000) // Update every second
-    
+
     return () => {
       clearInterval(registrationInterval)
       clearInterval(eventInterval)
@@ -67,10 +67,10 @@ export function HomeSection() {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent snap-start"
-      >
+    >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(225,109,60,0.1),transparent_50%)] z-[1]" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative flex flex-col items-center justify-center min-h-[700px] md:min-h-[900px]">
           {/* Orb - Behind Content */}
