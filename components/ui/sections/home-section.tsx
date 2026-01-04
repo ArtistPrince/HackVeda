@@ -17,7 +17,7 @@ export function HomeSection() {
 
   useEffect(() => {
     const calculateDaysLeft = () => {
-      const registrationDate = new Date('2026-01-10T23:59:59')
+      const registrationDate = new Date('2026-01-15T23:59:59')
       const today = new Date()
       const diffTime = registrationDate.getTime() - today.getTime()
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
@@ -249,7 +249,7 @@ export function HomeSection() {
                   <p className="text-[#E16D3C] text-2xl font-bold">
                     {daysLeft} {daysLeft === 1 ? 'day' : 'days'} left
                   </p>
-                  <p className="text-[#E8DDBF] text-xs opacity-60 mt-1">Deadline: January 5th, 2025</p>
+                  <p className="text-[#E8DDBF] text-xs opacity-60 mt-1">Deadline: January 15th, 2026</p>
                 </motion.div>
               )}
             </motion.div>
