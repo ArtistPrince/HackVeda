@@ -27,6 +27,12 @@ const scheduleData = [
         time: '6:00 - 7:30 pm',
         speaker: 'Tarun Sachdeva, Sr. Solution Architect',
         topic: 'RAG'
+    },
+    {
+        date: '9th Jan',
+        time: '6:00 - 7:30 pm',
+        speaker: '',
+        topic: 'Hackathon Overview and Guidance'
     }
 ]
 
