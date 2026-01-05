@@ -19,7 +19,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     id: 2,
-    date: '15 Jan 2026',
+    date: '10 Jan 2026',
     description: 'Registrations close'
   },
   {
