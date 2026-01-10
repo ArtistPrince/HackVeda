@@ -40,8 +40,9 @@ export default function SubmitIdeaPage() {
     }
 
     try {
-      // Call API to verify email in database
-      const response = await fetch('/api/verify-email', {
+      // Call Vercel API to verify email in database
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://hackvedaiilm.vercel.app'
+      const response = await fetch(`${apiUrl}/api/verify-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
