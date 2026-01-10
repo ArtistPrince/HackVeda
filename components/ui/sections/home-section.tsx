@@ -66,7 +66,7 @@ export function HomeSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent snap-start"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent snap-start pt-8 md:pt-8"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(225,109,60,0.1),transparent_50%)] z-[1]" />

@@ -34,3 +34,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Python credentials
+python_script/credentials.json
+python_script/token.json
+
+# Excel files
+*.xlsx

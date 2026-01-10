@@ -11,11 +11,13 @@ import { RoundsSection } from '@/components/ui/sections/rounds-section'
 import { ContactSection } from '@/components/ui/sections/contact-section'
 import { Footer } from '@/components/ui/sections/footer'
 
-import BackgroundMeshEffect from "@/components/ui/BackgroundMeshEffect";
+import BackgroundMeshEffect from '@/components/ui/BackgroundMeshEffect'
+import { IdeaSubmissionPopup } from '@/components/ui/idea-submission-popup'
 
 export default function Home() {
   return (
     <div className="relative">
+      <IdeaSubmissionPopup />
       <BackgroundMeshEffect />
       <div className="relative z-10">
         <Navigation />
