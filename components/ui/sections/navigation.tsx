@@ -86,7 +86,7 @@ export function Navigation() {
                       hover:scale-105"
               >
                 <span className="relative z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                  Register
+                  Registration Closed
                 </span>
               </LiquidButton>
             </a>
@@ -140,7 +140,7 @@ export function Navigation() {
                       hover:scale-105 w-full"
                   >
                     <span className="relative z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                      Register
+                      Registration Closed
                     </span>
                   </LiquidButton>
                 </a>
