@@ -78,11 +78,11 @@ export function Navigation() {
             >
               <LiquidButton
                 size="sm"
-                    className="relative font-semibold bg-gradient-to-r from-[#2C3E50] via-[#E16D3C] to-[#E8DDBF] text-white 
-                      hover:from-[#E16D3C] hover:via-[#E8DDBF] hover:to-[#2C3E50]
+                    className="relative font-semibold bg-gradient-to-r from-[#991B1B] via-[#DC2626] to-[#EF4444] text-white 
+                      hover:from-[#DC2626] hover:via-[#EF4444] hover:to-[#991B1B]
                       transition-all duration-300
-                      shadow-[0_0_15px_rgba(225,109,60,0.5),0_0_30px_rgba(232,221,191,0.3)]
-                      hover:shadow-[0_0_20px_rgba(225,109,60,0.7),0_0_40px_rgba(232,221,191,0.5)]
+                      shadow-[0_0_15px_rgba(220,38,38,0.5),0_0_30px_rgba(239,68,68,0.3)]
+                      hover:shadow-[0_0_20px_rgba(220,38,38,0.7),0_0_40px_rgba(239,68,68,0.5)]
                       hover:scale-105"
               >
                 <span className="relative z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
@@ -132,11 +132,11 @@ export function Navigation() {
                 >
                   <LiquidButton
                     size="sm"
-                    className="relative font-semibold bg-gradient-to-r from-[#2C3E50] via-[#E16D3C] to-[#E8DDBF] text-white 
-                      hover:from-[#E16D3C] hover:via-[#E8DDBF] hover:to-[#2C3E50]
+                    className="relative font-semibold bg-gradient-to-r from-[#991B1B] via-[#DC2626] to-[#EF4444] text-white 
+                      hover:from-[#DC2626] hover:via-[#EF4444] hover:to-[#991B1B]
                       transition-all duration-300
-                      shadow-[0_0_15px_rgba(225,109,60,0.5),0_0_30px_rgba(232,221,191,0.3)]
-                      hover:shadow-[0_0_20px_rgba(225,109,60,0.7),0_0_40px_rgba(232,221,191,0.5)]
+                      shadow-[0_0_15px_rgba(220,38,38,0.5),0_0_30px_rgba(239,68,68,0.3)]
+                      hover:shadow-[0_0_20px_rgba(220,38,38,0.7),0_0_40px_rgba(239,68,68,0.5)]
                       hover:scale-105 w-full"
                   >
                     <span className="relative z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
