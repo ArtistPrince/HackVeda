@@ -10,7 +10,7 @@ const hackathonRounds = [
     iconUrl: null,
     date: '15-November 2025',
     imageUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop&q=80',
-    buttonText: 'Register Now',
+    buttonText: 'Registration Closed',
     behindGlowColor: 'rgba(76, 175, 80, 0.67)',
     innerGradient: 'linear-gradient(145deg, rgba(76, 175, 80, 0.2) 0%, rgba(56, 142, 60, 0.1) 100%)'
   },
