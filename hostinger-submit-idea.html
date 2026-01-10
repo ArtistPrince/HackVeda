@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Idea - HackVeda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #0F1419, #1A1A1A, #2C3E50);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .card {
+            background: linear-gradient(to bottom right, #1A1A1A, #1F2A3C, #2C3E50);
+            border: 1px solid rgba(225, 109, 60, 0.5);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+        }
+        
+        h1 {
+            color: #E8DDBF;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            color: rgba(232, 221, 191, 0.8);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            color: #E8DDBF;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(15, 20, 25, 0.5);
+            border: 1px solid rgba(225, 109, 60, 0.3);
+            border-radius: 0.5rem;
+            color: #E8DDBF;
+            font-size: 1rem;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #E16D3C;
+            box-shadow: 0 0 0 2px rgba(225, 109, 60, 0.2);
+        }
+        
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to right, #991B1B, #DC2626, #EF4444);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.7);
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        
+        .success {
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid #4ade80;
+            color: #4ade80;
+        }
+        
+        .error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            color: #ef4444;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #fff;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-left: 0.5rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: rgba(232, 221, 191, 0.7);
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #E16D3C;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Home</a>
+        
+        <div class="card">
+            <h1>Submit Your Idea</h1>
+            <p class="subtitle">Enter your team leader's email address to proceed with idea submission</p>
+            
+            <form id="submitForm">
+                <div class="form-group">
+                    <label for="email">Team Leader Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="teamleader@example.com"
+                        required
+                        autocomplete="email"
+                    />
+                    <p style="margin-top: 0.5rem; font-size: 0.75rem; color: rgba(232, 221, 191, 0.6);">
+                        Email will be automatically converted to lowercase for consistency
+                    </p>
+                </div>
+                
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Send me the form link</span>
+                </button>
+            </form>
+            
+            <div id="message"></div>
+            
+            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(225, 109, 60, 0.2); text-align: center;">
+                <p style="font-size: 0.75rem; color: rgba(232, 221, 191, 0.6);">
+                    Submission deadline: <span style="color: #E16D3C; font-weight: 600;">16 Jan 2026</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const API_URL = 'https://hackvedaiilm.vercel.app/api/verify-email';
+        
+        document.getElementById('submitForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const emailInput = document.getElementById('email');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const messageDiv = document.getElementById('message');
+            
+            const email = emailInput.value.trim();
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            btnText.innerHTML = 'Sending... <span class="loading"></span>';
+            messageDiv.innerHTML = '';
+            
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    messageDiv.className = 'message success';
+                    messageDiv.innerHTML = `
+                        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">✅ Success!</p>
+                        <p>The idea submission form link has been sent to <strong>${data.email}</strong></p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Please check your inbox (and spam folder).</p>
+                    `;
+                    emailInput.value = '';
+                } else {
+                    messageDiv.className = 'message error';
+                    messageDiv.innerHTML = `
+                        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">❌ Error</p>
+                        <p>${data.error || 'An error occurred. Please try again.'}</p>
+                    `;
+                }
+            } catch (error) {
+                messageDiv.className = 'message error';
+                messageDiv.innerHTML = `
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">❌ Connection Error</p>
+                    <p>Unable to connect to the server. Please try again later.</p>
+                `;
+                console.error('Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send me the form link';
+            }
+        });
+    </script>
+</body>
+</html>
