@@ -41,10 +41,10 @@ export function IdeaSubmissionPopup() {
                   Idea Submission Window
                 </p>
                 <h3 className="text-2xl font-bold text-[#E8DDBF]">
-                  Idea submissions are open now
+                  Idea submissions are closed now
                 </h3>
                 <p className="text-sm text-[#E8DDBF]/80 leading-relaxed">
-                  Submit your hackathon idea between <span className="text-[#E16D3C] font-semibold">10 Jan</span> and <span className="text-[#E16D3C] font-semibold">16 Jan 2026</span>. Share your concept, problem statement, and impact for review.
+                  Idea submission window is closed now. Please wait for the results.
                 </p>
               </div>
 
@@ -59,14 +59,8 @@ export function IdeaSubmissionPopup() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div className="text-sm text-[#E8DDBF]/70">
-                Secure your spot early and keep your team aligned on the submission timeline.
+                Thank you for your submissions. Stay tuned for updates.
               </div>
-              <Link
-                href="/submit-idea"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#E16D3C] via-[#E8DDBF] to-[#2C3E50] px-5 py-3 text-sm font-semibold text-white shadow-[0_0_25px_rgba(225,109,60,0.5)] transition hover:scale-105 hover:shadow-[0_0_35px_rgba(225,109,60,0.7)]"
-              >
-                Submit Idea
-              </Link>
             </div>
           </motion.div>
         </>
