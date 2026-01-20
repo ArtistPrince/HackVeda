@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove 'output: export' to enable API routes on Vercel
+  output: 'export',
   // Static frontend will be on Hostinger, API will be on Vercel
   async headers() {
     return [
