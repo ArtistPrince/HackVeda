@@ -44,8 +44,7 @@ export function IdeaSubmissionPopup() {
                   Results have been announced.
                 </h3>
                 <p className="text-sm text-[#E8DDBF]/80 leading-relaxed">
-                  We are pleased to announce that the results have been finalized. All leaders have received their notification emails with further details.
-                </p>
+                 We are pleased to inform you that the results for Round 1 have been finalized. All team leaders and team members who have qualified for Round 2 have been notified via email with further details. Please check your inbox.</p>
               </div>
 
               <button
