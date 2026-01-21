@@ -4,6 +4,7 @@ import { Navigation } from '@/components/ui/sections/navigation'
 import { HomeSection } from '@/components/ui/sections/home-section'
 import { AboutSection } from '@/components/ui/sections/about-section'
 import { TimelineSection } from '@/components/ui/sections/timeline-section'
+import { ResultSection } from '@/components/ui/sections/result-section'
 import { ScheduleSection } from '@/components/ui/sections/schedule-section'
 import { ThemesSection } from '@/components/ui/sections/themes-section'
 import { PrerequisitesSection } from '@/components/ui/sections/prerequisites-section'
@@ -24,6 +25,7 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <TimelineSection />
+        <ResultSection />
         <ScheduleSection />
         <ThemesSection />
         <PrerequisitesSection />
