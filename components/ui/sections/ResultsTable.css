@@ -1,0 +1,145 @@
+.results-table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(44, 62, 80, 0.95) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(225, 109, 60, 0.2);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.results-table-header {
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(225, 109, 60, 0.15) 0%, rgba(44, 62, 80, 0.15) 100%);
+  border-bottom: 2px solid rgba(225, 109, 60, 0.3);
+  padding: 20px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.results-header-item {
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  color: #E8DDBF;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.results-list-container {
+  /* max-height removed to show all items */
+}
+
+.results-row-wrapper {
+  margin-bottom: 0 !important;
+  padding: 0 24px;
+}
+
+.results-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(225, 109, 60, 0.1);
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.results-row:last-child {
+  border-bottom: none;
+}
+
+.results-row:hover {
+  background-color: rgba(225, 109, 60, 0.05);
+}
+
+.results-row.selected {
+  background-color: rgba(225, 109, 60, 0.1);
+  border-left: 3px solid #E16D3C;
+  padding-left: 21px;
+  /* Compensate for border width to keep alignment */
+}
+
+.results-cell {
+  display: flex;
+  align-items: center;
+}
+
+.cell-text {
+  color: #E8DDBF;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.results-row.selected .cell-text {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.leader-text {
+  color: #E16D3C;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+  .results-table-header,
+  .results-row {
+    grid-template-columns: 150px 1fr 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .results-table-header {
+    display: none;
+    /* Hide header on mobile for simpler view or stack it */
+  }
+
+  .results-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .results-cell {
+    padding: 0;
+  }
+
+  .results-table-container {
+    max-width: 100%;
+  }
+
+  .leader-text::before {
+    content: "Leader: ";
+    color: #E8DDBF;
+    opacity: 0.7;
+    margin-right: 5px;
+    font-size: 0.85rem;
+  }
+
+  .institution-text::before {
+    content: "Inst: ";
+    color: #E16D3C;
+    opacity: 0.7;
+    margin-right: 5px;
+    font-size: 0.85rem;
+  }
+
+  .theme-text::before {
+    content: "Theme: ";
+    color: #E16D3C;
+    opacity: 0.7;
+    margin-right: 5px;
+    font-size: 0.85rem;
+  }
+}

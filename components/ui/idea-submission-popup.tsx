@@ -44,7 +44,7 @@ export function IdeaSubmissionPopup() {
                   Results have been announced.
                 </h3>
                 <p className="text-sm text-[#E8DDBF]/80 leading-relaxed">
-                 We are pleased to inform you that the results for Round 1 have been finalized. All team leaders and team members who have qualified for Round 2 have been notified via email with further details. Please check your inbox.</p>
+                  We are pleased to inform you that the results for Round 1 have been finalized. All team leaders and team members who have qualified for Round 2 have been notified via email with further details. Please check your inbox.</p>
               </div>
 
               <button
@@ -60,10 +60,18 @@ export function IdeaSubmissionPopup() {
               <div className="text-sm text-[#E8DDBF]/70">
                 Thank you for your participation and dedication. We look forward to seeing you in future events.
               </div>
+              <Link
+                href="/results"
+                onClick={() => setIsOpen(false)}
+                className="inline-flex items-center justify-center rounded-full bg-[#E16D3C] px-6 py-2 text-sm font-semibold text-white shadow-lg shadow-[#E16D3C]/20 transition-all hover:bg-[#E16D3C]/90 hover:shadow-[#E16D3C]/40 active:scale-95 whitespace-nowrap"
+              >
+                Check Result
+              </Link>
             </div>
           </motion.div>
         </>
-      )}
-    </AnimatePresence>
+      )
+      }
+    </AnimatePresence >
   )
 }
