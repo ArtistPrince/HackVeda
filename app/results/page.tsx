@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import AnimatedList from '@/components/ui/AnimatedList'
 import '@/components/ui/sections/ResultsTable.css'
 import { Navigation } from '@/components/ui/sections/navigation'
@@ -83,7 +83,6 @@ const AnimatedTableRow = ({ item, index, isSelected, onMouseEnter, onClick }: {
                 </div>
             </div>
         </div>
-        </div >
     )
 }
 
