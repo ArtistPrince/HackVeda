@@ -34,9 +34,7 @@
   text-transform: uppercase;
 }
 
-.results-list-container {
-  /* max-height removed to show all items */
-}
+
 
 .results-row-wrapper {
   margin-bottom: 0 !important;

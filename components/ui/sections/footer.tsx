@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Mail, Phone, Instagram } from 'lucide-react'
+import { usePathname, useRouter } from 'next/navigation'
 
 const quickLinks = [
   { name: 'About', id: 'about' },
@@ -14,10 +15,17 @@ const quickLinks = [
 ]
 
 export function Footer() {
+  const pathname = usePathname()
+  const router = useRouter()
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    if (pathname === '/') {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    } else {
+      router.push(`/#${id}`)
     }
   }
 
@@ -34,7 +42,7 @@ export function Footer() {
           >
             <h3 className="text-2xl font-bold text-[#E8DDBF] mb-2">HackVeda</h3>
             <p className="text-[#E8DDBF] text-sm leading-relaxed opacity-80">
-              A national-level hackathon hosted by IILM with support from IBM and AWS — 
+              A national-level hackathon hosted by IILM with support from IBM and AWS —
               where innovation meets impact.
             </p>
           </motion.div>
